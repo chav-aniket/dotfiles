@@ -7,7 +7,6 @@ echo "${GREEN}This is zsh version:"
 zsh --version
 echo "${NC}All systems are ready.\n"
 
-bash ~/dotfiles/scripts/startup.sh
 # TODO: Add prompt to ask whether we need to update our system
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -117,3 +116,9 @@ alias home="cd ~"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# starting ssh-agent
+eval `ssh-agent -s`
+
+# running abstracted startup shell script
+bash dotfiles/scripts/startup.sh

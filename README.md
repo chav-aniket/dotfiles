@@ -18,26 +18,6 @@ In this doc you'll find an explanation for how to get an Ubuntu system started f
 2. create ssh key/s and configure correct keys to load in `startup.sh`
 3. set git configs
 
-## Walkthrough of zshrc
-
-**L1-8:** purely cosmetic startup messages.
-
-**L10:** startup shell script that is abstracted for easy customisation
-
-**L13-18:** p10k instant prompt for a quicker shell prompt
-
-**L28-33:** installing Znap and znap plugins
-
-**L35-67:** zsh/ohmyzsh configurations
-
-**L69-78:** zsh plugins
-
-**L80:** sourcing ohmyzsh script
-
-**L99-116**: aliases
-
-**L119:** source p10k configurations
-
 ## SSH
 
 ### How to add an SSH key
