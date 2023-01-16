@@ -1,10 +1,26 @@
-# Setup ZSH, OhMyZsh, powerlevel10k theme and zsh-autosuggestions
+# install tools required for builds; e.g. gcc
+
+sudo apt install build-essential unzip neovim ripgrep
+
+# setup zsh, OhMyZsh, powerlevel10k theme and zsh-autosuggestions
 
 sudo apt-get install -y zsh;
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
 
+# set up .config directory
+
+mkdir ~/.config;
+ln -s ~/dotfiles/nvim ~/.config/nvim
+
+# install packer.nvim
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# TODO: Do I need a command to install packer plugins?
+# nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # install gh cli
 
@@ -15,12 +31,12 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt update \
 && sudo apt install gh -y;
 
-# Adding pre-built MPR repository to install packages from
+# adding pre-built MPR repository to install packages from
 
 curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null \
 && echo "deb [signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list \
 && sudo apt update
 
-# Installing just from the pre-built MPR repository
+# installing just from the pre-built MPR repository
 
 sudo apt install just

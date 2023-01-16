@@ -121,4 +121,4 @@ alias home="cd ~"
 eval `ssh-agent -s`
 
 # running abstracted startup shell script
-bash dotfiles/scripts/startup.sh
+bash ~/dotfiles/scripts/startup.sh
