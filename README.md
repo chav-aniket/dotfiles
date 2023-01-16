@@ -29,6 +29,7 @@ The `startup.sh` script starts the ssh-agent and you can set it up to add your s
 Read these articles to learn more about how ssh keys are generated and how the ssh-agent works.
 
 <https://www.ssh.com/academy/ssh/keygen#what-is-ssh-keygen?>
+
 <https://www.ssh.com/academy/ssh/agent>
 
 ## Neovim Configuration
