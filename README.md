@@ -127,6 +127,7 @@ The `lua/uss` subdirectory contains an `init.lua` which loads in the other scrip
 | gh cli | github's cli | [github][ghcli-gh] |
 | just | imagine package.json scripts but language agnostic, it allows project specific utility scripts | [website][just-ws] |
 | neovim | modal terminal editor | [website][neovim-ws] |
+| volta | node version manager | [website][volta-ws] |
 
 [zsh-ws]: https://www.zsh.org
 [omz-ws]: https://ohmyz.sh
@@ -138,3 +139,4 @@ The `lua/uss` subdirectory contains an `init.lua` which loads in the other scrip
 [ghcli-gh]: https://github.com/cli/cli#installation
 [just-ws]: https://just.systems/man/en/chapter_1.html
 [neovim-ws]: https://neovim.io
+[volta-ws]: https://volta.sh
