@@ -4,7 +4,7 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-	'sumneko_lua',
+	'lua_ls',
   -- TODO: add your own ensures, you can use ':Mason'
   -- to see which language servers are available
 })
