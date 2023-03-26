@@ -85,6 +85,7 @@ The `lua/uss` subdirectory contains an `init.lua` which loads in the other scrip
 - `<leader>+pf`: file fuzzy finder
 - `<leader>+ps`: text fuzzy finder
 - `<ctr>+p`: file fuzzy finder for git tracked files
+- `<leader>+q`: close current buffer
 - `<leader>+c`: select a buffer to close
 
 ### Neovim Plugins Installed

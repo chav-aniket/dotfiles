@@ -9,6 +9,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "Q", "<nop>")
 
+vim.keymap.set("n", "q", ":bp<bar>sp<bar>bn<bar>bd<CR>")
+
 -- add string to list translation for providing multiple buffers
 vim.keymap.set('n', '<leader>c', function()
     print(vim.cmd('buffers'))
